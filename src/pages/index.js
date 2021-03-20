@@ -4,7 +4,7 @@ import get from "lodash/get";
 import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
 import ArticlePreview from "../components/article-preview";
-
+ 
 class RootIndex extends React.Component {
   render() {
     const beers = get(this, "props.data.allContentfulBeers.edges");
@@ -23,6 +23,8 @@ class RootIndex extends React.Component {
           </div>
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
+            <h1>Beer</h1>
+              <p>Knotted Root</p>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
